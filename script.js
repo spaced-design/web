@@ -1,0 +1,65 @@
+// 프로필 클릭 시 애니메이션 추가
+function toggleProfile() {
+    const profilecard = document.querySelector('.profile-card');
+    const background = document.querySelector('.background');
+
+    profilecard.classList.toggle('clicked');
+    background.style.filter = 'none';
+}
+
+// 캔버스를 이용한 도트 애니메이션
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * -canvas.height;
+        this.radius = Math.random() * 6 + 4;
+        this.speed = Math.random() * 2 + 1;
+    }
+
+    update() {
+        this.y += this.speed;
+        if (this.y > canvas.height) {
+            this.y = Math.random() * -canvas.height;
+            this.x = Math.random() * canvas.width;
+        }
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(160, 160, 160, 0.9)";
+        ctx.fill();
+    }
+}
+
+const colors = [
+    'rgba(121, 121, 121, 0.9)',
+];
+
+this.color = colors[Math.floor(Math.random() * colors.length)];
+
+function initParticles() {
+    for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+    }
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
