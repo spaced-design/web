@@ -21,7 +21,7 @@ class Particle {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * -canvas.height;
         this.radius = Math.random() * 6 + 4;
-        this.speed = Math.random() * 2 + 1;
+        this.speed = Math.random() * 3 + 5;
     }
 
     update() {
