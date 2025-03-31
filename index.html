@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Spaced Designs</title>
     <link rel="stylesheet" href="style.css">
     
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+</style>
+
 <body>
     <canvas id="particleCanvas"></canvas>
     <div class="background"></div>
+    <div class="box"></div>
+    
+    <div class="content"></div>
+
+    <div class="box-container">
+        <div class="box"></div>
+    </div>
+    
     <div class="container">
         <div class="profile-card" onclick="toggleProfile()">
-            <img src="pfp.jpg" alt="Profile Image">
+            <img src="pics/pfp.jpg" alt="Profile Image">
             <h1>Spaced Designs, 2025</h1>
-            <p>Do what others do not expect.</p>
+            <p>show us what's your identity.</p>
 
 
             <!-- Social Media Link-->
@@ -44,10 +55,18 @@
                 <a href="https://steamcommunity.com/id/vitalizations/" target="_blank">
                     <i class="fab fa-steam"></i>
                 </a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsmGVpLXsWBCpJzZFCQnpThczMKjJWxlKDdvTRPmbBPBRGKLTQQCJKCGvkPgfQXRSWRcllPq" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                
+                <a href="pgs/page.html" class="button">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    
 </body>
+<script src="script.js"></script>
 </html>

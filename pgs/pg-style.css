@@ -14,6 +14,9 @@ body {
     background-attachment: cover;
 }
 
+
+
+
 .box-container {
     position: fixed;
     bottom: -50px;
@@ -25,7 +28,7 @@ body {
 }
 
 .box {
-    width: 200px;
+    width: 500px;
     height: 150px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -90,30 +93,31 @@ canvas {
     cursor: pointer;
     transition: transform 0.3s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*그림자 추가*/
-    width: 300px;  /* 기존보다 더 크게 설정 */
-    height: 300px; /* 높이도 증가 */
+    width: 1200px;  /* 기존보다 더 크게 설정 */
+    height: 900px; /* 높이도 증가 */
     padding: 20px; /* 내부 여백 증가 */
-}
-
-.profile-card:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .profile-card img {
     width: 150px;  /* 프로필 이미지 크기 증가 */
     height: 150px;
-    border-radius: 50%;
-}
-
-.profile-card h1 {
-    font-size: 28px; /* 글씨 크기 증가 */
+    border-radius: 50%; /* 이미지 위치 조정 */
+    transform: translateX(-340%);
 }
 
 .profile-card p {
     font-size: 18px; /* 설명 글씨도 키우기 */
 }
 
+
+/* "Spaced Design" 에 대한 텍스트 코드 */
+.text {
+    font-size: 30px; /* 글씨 크기 증가 */
+    margin-top: 20px; /* 이미지와 텍스트 사이의 간격 */
+    color: #333; /* 텍스트 색상 */
+    text-align: center; /* 가운데 정렬 */
+    transform: translateX(-20%)  translateY(-400%); 
+}
 
 
 

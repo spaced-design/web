@@ -115,21 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     )
 });
 
+// 프로필 클릭 시 애니메이션 추가
+function toggleProfile() {
+    const profilecard = document.querySelector('.profile-card');
+    const background = document.querySelector('.background');
 
-
-
-
-/* 스크롤 박스 이벤트 */
-
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".box-container");
-
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        const triggerPoint = window.innerHeight * 0.9; // 화면의 60% 높이에서 실행
-
-        if (scrollY > triggerPoint) {
-            container.classList.add("show");
-        }
-    });
-});
+    profilecard.classList.toggle('clicked');
+    background.style.filter = 'none';
+}
